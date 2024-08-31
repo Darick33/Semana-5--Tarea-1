@@ -41,6 +41,7 @@ export class NuevafacturaComponent implements OnInit {
     this.idFactura = idFacturaParam ? parseInt(idFacturaParam) : 0;
     
     if (this.idFactura > 0) {
+
       this.uno(this.idFactura);
     }
   }
@@ -78,6 +79,8 @@ export class NuevafacturaComponent implements OnInit {
       this.frm_factura.get('Clientes_idClientes')?.setValue(respuesta.Clientes_idClientes);
       // this.totalapagar = parseInt(respuesta.Sub_total) + parseInt(respuesta.Sub_total_iva);
     });
+  this.titulo = 'Editar Factura';
+
   }
 
   
