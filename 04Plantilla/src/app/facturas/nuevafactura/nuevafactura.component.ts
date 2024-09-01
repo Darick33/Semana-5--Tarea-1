@@ -74,10 +74,11 @@ export class NuevafacturaComponent implements OnInit {
       // this.frm_factura.patchValue(respuesta);
       this.frm_factura.get('Fecha')?.setValue(respuesta.Fecha.split(' ')[0]);
       this.frm_factura.get('Sub_total')?.setValue(respuesta.Sub_total);
-      this.frm_factura.get('Sub_total_iva')?.setValue(respuesta.Sub_total_iva);
+      // this.frm_factura.get('Sub_total_iva')?.setValue(respuesta.Sub_total_iva);
       this.frm_factura.get('Valor_IVA')?.setValue(respuesta.Valor_IVA);
       this.frm_factura.get('Clientes_idClientes')?.setValue(respuesta.Clientes_idClientes);
       // this.totalapagar = parseInt(respuesta.Sub_total) + parseInt(respuesta.Sub_total_iva);
+      this.calculos();
     });
   this.titulo = 'Editar Factura';
 
